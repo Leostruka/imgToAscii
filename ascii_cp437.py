@@ -13,7 +13,7 @@ if not image_path:
 scale = simpledialog.askinteger("Input", "Enter scale (e.g., 1 for original size, 2 for half size, 3 for default, etc.):", minvalue=1)
 root.destroy()
 
-if not scale or scale < 1:
+if not scale:
     scale = 3
 
 img_orig = Image.open(image_path)

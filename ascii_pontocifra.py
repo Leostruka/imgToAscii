@@ -13,7 +13,7 @@ if not image_path:
 scale = simpledialog.askinteger("Input", "Enter scale (e.g., 1 for original size, 2 for half size, 3 for default, etc.):", minvalue=1)
 root.destroy()
 
-if not scale or scale < 1:
+if not scale:
     scale = 3
 
 img_orig = Image.open(image_path)
@@ -45,6 +45,6 @@ def ascii_art_generator(image):
 
 if __name__ == "__main__":
     ascii_art = ascii_art_generator(image)
-    with open('output.txt', 'w') as f:
+    with open('output_pontocifra.txt', 'w') as f:
         for c in ascii_art:
             f.write(c)
